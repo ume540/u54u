@@ -7,16 +7,16 @@ PWD=`pwd`
 echo "----------------------------------------------------------------------"
 echo "-- install required package to build kernel source"
 echo "----------------------------------------------------------------------"
-apt-get install build-essential
-apt-get install kernel-package
-apt-get install libncurses-dev
+sudo apt-get install build-essential
+sudo apt-get install kernel-package
+sudo apt-get install libncurses-dev
 # libqt3 is required only to use make xconfig
-apt-get install libqt3-mt-dev
+sudo apt-get install libqt3-mt-dev
 
 echo "----------------------------------------------------------------------"
 echo "-- downloding kernel source"
 echo "----------------------------------------------------------------------"
-apt-get install linux-source-${KERNEL_VER}
+sudo apt-get install linux-source-${KERNEL_VER}
 
 echo "----------------------------------------------------------------------"
 echo "-- extracting kernel source to current directory"
