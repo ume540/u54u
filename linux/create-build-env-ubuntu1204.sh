@@ -31,6 +31,11 @@ cp /boot/config-${KERNEL_VER}-${KERNEL_REV}-generic .config
 make oldconfig
 # following modification is needed in kernel 3.x on ubuntu 
 sed -i s/CONFIG_RTS5139=m/CONFIG_RTS5139=n/ .config
+
+echo "----------------------------------------------------------------------"
+echo "-- generating ctags for vi"
+echo "----------------------------------------------------------------------"
+make tags
 popd
 
 # following line is needed for kernel 2.6 on ubunu
