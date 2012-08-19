@@ -29,7 +29,7 @@ echo "----------------------------------------------------------------------"
 pushd linux-source-${KERNEL_VER}
 cp /boot/config-${KERNEL_VER}-${KERNEL_REV}-generic .config
 make oldconfig
-# following modification is needed in kernel 3.x on ubuntu 
+# following modification is needed in kernel 3.x on ubuntu
 sed -i s/CONFIG_RTS5139=m/CONFIG_RTS5139=n/ .config
 
 echo "----------------------------------------------------------------------"
