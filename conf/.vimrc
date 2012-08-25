@@ -84,6 +84,9 @@ set wildchar=<Tab>  " enable tab completion
 set nocompatible    " disable vi compatibility function
 au FileType * set complete=.,w,b,u,t,i		" reset completion setting
 
+"insert newline by key <CR> in normal mode without entering edit mode.
+noremap <CR> o<ESC>
+
 " {{{ reload .vimrc by Ctrl-F12
 if has("unix")
 	noremap <C-F12> :source ~/.vimrc<CR>
