@@ -32,6 +32,11 @@ NeoBundle 'https://github.com/soh335/unite-qflist.git'
 NeoBundle 'https://github.com/Sixeight/unite-grep.git'
 NeoBundle 'https://github.com/kmnk/vim-unite-svn.git'
 
+NeoBundle 'project.tar.gz'
+NeoBundle 'surround.vim'
+NeoBundle 'taglist.vim'
+NeoBundle 'vcscommand.vim'
+
 filetype plugin indent on
 " }}}
 " {{{ display settings --------------------------------------------------------
@@ -86,6 +91,10 @@ au FileType * set complete=.,w,b,u,t,i		" reset completion setting
 
 "insert newline by key <CR> in normal mode without entering edit mode.
 noremap <CR> o<ESC>
+
+"settings for VimFiler
+let g:vimfiler_as_default_explorer = 1
+command Vf VimFiler -buffer-name=explorer -split -simple -winwidth=35 -no-quit
 
 " {{{ reload .vimrc by Ctrl-F12
 if has("unix")
