@@ -2,14 +2,6 @@
 # My bashrc.
 #
 
-# gcc settings
-#export CC=gcc-4.5
-#export CXX=g++-4.5
-
-# java settings
-#export JAVA_HOME=~/jdk1.6.0_34
-#export PATH=$PATH:$JAVA_HOME/bin
-
 # android sdk/ndk setting
 export NDK_BASE=~/android/devtools/ndk-r8
 export PATH=$PATH:~/bin
@@ -25,4 +17,16 @@ export PATH=$PATH:~/eclipse:~/Aptana_Studio_3
 
 alias eclipse='eclipse >& /dev/null &'
 alias aptana='AptanaStudio3 >& /dev/null &'
+
+# grep C source
+cgrep() {
+    if [ $# -lt 2 ]; then
+        echo "Error: too few argument."
+        echo "    Usage: $0 <dir> <pattern>"
+        echo "    ex) $0 . 'main'"
+        echo ""
+        return
+    fi
+    find $1 -name "*.[ch]" | xargs grep -n --color=auto "$2"
+}
 

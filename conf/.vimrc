@@ -17,6 +17,7 @@ NeoBundle 'https://github.com/Shougo/vimproc.git'
 NeoBundle 'https://github.com/Shougo/vimshell.git'
 
 NeoBundle 'https://github.com/Shougo/unite.vim.git'
+NeoBundle 'git://github.com/osyo-manga/unite-quickfix.git'
 NeoBundle 'https://github.com/tsukkee/unite-tag.git'
 NeoBundle 'https://github.com/tsukkee/unite-help.git'
 NeoBundle 'https://github.com/h1mesuke/unite-outline.git'
@@ -32,10 +33,13 @@ NeoBundle 'https://github.com/soh335/unite-qflist.git'
 NeoBundle 'https://github.com/Sixeight/unite-grep.git'
 NeoBundle 'https://github.com/kmnk/vim-unite-svn.git'
 
+NeoBundle 'https://github.com/thinca/vim-quickrun.git'
+
 NeoBundle 'project.tar.gz'
 NeoBundle 'surround.vim'
 NeoBundle 'taglist.vim'
 NeoBundle 'vcscommand.vim'
+NeoBundle 'quickrun.vim'
 
 filetype plugin indent on
 " }}}
@@ -49,6 +53,8 @@ set ruler
 set foldmethod=marker
 set showmatch
 set helplang=ja,en
+
+let g:quickrun_config = { 'outputter' : 'unite_quickfix' }
 
 " {{{ show wide-space and space at tail.
 if has("syntax")
