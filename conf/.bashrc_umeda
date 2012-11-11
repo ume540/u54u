@@ -25,7 +25,7 @@ export PATH=$PATH:~/bin
 export PATH=$PATH:~/eclipse
 
 # aliases
-alias ls='ls -G'
+alias ls='ls -G --color=auto'
 alias grep='grep --color=auto'
 alias eclipse='eclipse >& /dev/null &'
 

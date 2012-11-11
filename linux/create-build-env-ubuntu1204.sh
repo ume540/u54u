@@ -5,15 +5,6 @@ KERNEL_REV=29
 PWD=`pwd`
 
 echo "----------------------------------------------------------------------"
-echo "-- install required package to build kernel source"
-echo "----------------------------------------------------------------------"
-sudo apt-get install build-essential
-sudo apt-get install kernel-package
-sudo apt-get install libncurses-dev
-# libqt3 is required only to use make xconfig
-sudo apt-get install libqt3-mt-dev
-
-echo "----------------------------------------------------------------------"
 echo "-- downloding kernel source"
 echo "----------------------------------------------------------------------"
 sudo apt-get install linux-source-${KERNEL_VER}
@@ -36,6 +27,7 @@ echo "----------------------------------------------------------------------"
 echo "-- generating ctags for vi"
 echo "----------------------------------------------------------------------"
 make tags
+gtags
 popd
 
 # following line is needed for kernel 2.6 on ubunu

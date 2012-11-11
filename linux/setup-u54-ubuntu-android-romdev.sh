@@ -7,6 +7,7 @@ progsec() {
 progsec "--                    Install required packages                     --"
 
 sudo apt-get install \
+    lzop \
     git-core \
     gnupg \
     flex bison \
@@ -32,7 +33,6 @@ sudo apt-get install \
     libreadline6-dev:i386 \
     libgl1-mesa-glx:i386 \
     zlib1g-dev:i386 \
-#    libncurses5-dev:i386 \
 
 sudo ln -s libGL.so.1 /usr/lib/i386-linux-gnu/mesa/libGL.so
 sudo ln -s mesa/libGL.so /usr/lib/i386-linux-gnu/libGL.so
