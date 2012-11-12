@@ -4,20 +4,24 @@
 
 # android sdk/ndk setting
 export NDK_BASE=~/android/devtools/ndk-r8
-export PATH=$PATH:~/bin
+export PATH=$PATH:$NDK_BASE
+
+# android sdk settings
 ANDROID_SDK_HOME=~/android/devtools/sdk
 export PATH=$PATH:$ANDROID_SDK_HOME/tools
 export PATH=$PATH:$ANDROID_SDK_HOME/platform-tools
-export PATH=$PATH:$NDK_BASE
 export USE_CCACHE=1
 
 # misc path settings
-export PATH=$PATH:~/eclipse:~/Aptana_Studio_3
-#export PATH=$PATH:~/cov-sa-linux64-5.5.3/bin
+export PATH=$PATH:~/bin
+export PATH=$PATH:~/eclipse
 
+# aliases
+alias ls='ls -G --color=auto'
+alias grep='grep --color=auto'
 alias eclipse='eclipse >& /dev/null &'
-alias aptana='AptanaStudio3 >& /dev/null &'
 
+#{{{ functions ------------------------------------------------------------
 # grep C source
 cgrep() {
     if [ $# -lt 2 ]; then
@@ -29,4 +33,5 @@ cgrep() {
     fi
     find $1 -name "*.[ch]" | xargs grep -n --color=auto "$2"
 }
+#}}}
 
