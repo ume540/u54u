@@ -13,7 +13,8 @@ sudo apt-get install \
     flex bison \
     gperf \
     build-essential \
-    zip curl \
+    zip \
+    curl \
     libc6-dev \
     x11proto-core-dev \
     libgl1-mesa-dev \
@@ -36,4 +37,9 @@ sudo apt-get install \
 
 sudo ln -s libGL.so.1 /usr/lib/i386-linux-gnu/mesa/libGL.so
 sudo ln -s mesa/libGL.so /usr/lib/i386-linux-gnu/libGL.so
+
+# install repo for clone android platform source
+mkdir -p ~/bin
+curl https://dl-ssl.google.com/dl/googlesource/git-repo/repo > ~/bin/repo
+chmod +x ~/bin/repo
 
