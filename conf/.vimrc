@@ -96,11 +96,18 @@ set nocompatible    " disable vi compatibility function
 au FileType * set complete=.,w,b,u,t,i		" reset completion setting
 
 "insert newline by key <CR> in normal mode without entering edit mode.
-noremap <CR> o<ESC>
+"noremap <CR> o<ESC>
 
 "settings for VimFiler
 let g:vimfiler_as_default_explorer = 1
 command Vf VimFiler -buffer-name=explorer -split -simple -winwidth=35 -no-quit
+
+"settings for Gtags
+map <C-g> :Gtags 
+map <C-h> :Gtags -f %<CR>
+map <C-j> :GtagsCursor<CR>
+map <C-n> :cn<CR>
+map <C-p> :cp<CR>
 
 " {{{ reload .vimrc by Ctrl-F12
 if has("unix")
